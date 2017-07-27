@@ -1,0 +1,12 @@
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><img class="responsive-img" src="https://www.symplicity.com/wp-content/uploads/symp-reg-color-2x-1.png"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down" [hidden]="!_backendService.loggedIn">
+        <li><a  class="waves-effect waves-light" 
+        		(click)="_backendService.logout()" 
+        		href="javascript:void(0)">Log out</a>
+		</li>
+      </ul>
+    </div>
+  </nav>
+ 

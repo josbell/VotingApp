@@ -1,0 +1,26 @@
+<div class="section center-align">
+<h3 class="center-align">Snack Survey</h3>
+<h5 class="center-align">Micromanaging employee snacks since 1996</h5>
+<br/>
+<form class="col s12" materialize (ngSubmit)="logIn()" #loginForm="ngForm">
+	<div class="input-field col s12">
+		<input id="username" type="text" class="validate" name='username' [(ngModel)]="username">
+		<label for="username" >Username</label>
+	</div>
+</form>
+<div>
+	<p class='errors' *ngFor='let error of _backendService.errors | async'>{{error}}</p>
+</div>
+	
+</div>
+
+<div id="errorModal" class="modal" materialize='modal' [materializeParams]="[{dismissible: true}]" [materializeActions]="modalActions">
+	<div class="modal-content">
+		<form class="col s12" (ngSubmit)="logIn()" #loginForm="ngForm">
+			<div class="input-field col s12">
+				<input id="user" type="text" class="validate" name='user' [(ngModel)]="user">
+				<label for="user">Username</label>
+			</div>
+		</form>
+	</div>
+</div>

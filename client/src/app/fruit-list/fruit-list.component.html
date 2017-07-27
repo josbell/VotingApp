@@ -1,0 +1,11 @@
+<ul class="collection with-header">
+	<li class="collection-header"><h4>Vote For You Favorite Snacks</h4></li>
+	<a href="javascript:void(0)" class="collection-item" 
+		*ngFor='let fruit of _backendService._fruitList | async'
+		(click)="voteFor(fruit)">
+		<span class="badge">
+			{{fruit.totalVotes}}
+		</span>
+		{{fruit.name}}
+	</a>
+</ul>

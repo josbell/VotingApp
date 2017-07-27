@@ -1,0 +1,5 @@
+<form class="col s12" (ngSubmit)="onNewFruitSubmit()" #newFruitForm="ngForm">
+	<div class="input-field col s12">
+		<input placeholder="Add New Fruit" id="fruit.name" type="text" class="validate" name='newFruit' [(ngModel)]="newFruit">
+	</div>
+</form>

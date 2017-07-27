@@ -1,0 +1,15 @@
+<body>
+	<app-navbar></app-navbar>
+	<div class="container">
+	<app-log-in [hidden]=_backendService.loggedIn></app-log-in>
+	<div class="row">
+		<div class="col s2"></div>
+		<div class="col s8">
+	      	<app-fruit-list [hidden]=!_backendService.loggedIn></app-fruit-list>
+			<app-new-fruit-form [hidden]=!_backendService.loggedIn></app-new-fruit-form>
+		</div>
+		<div class="col s2"></div>
+	</div>
+	</div>
+</body>
+
